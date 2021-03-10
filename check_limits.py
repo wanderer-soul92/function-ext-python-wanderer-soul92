@@ -1,18 +1,10 @@
-
-def battery_is_ok(temperature, soc, charge_rate):
-  if temperature < 0 or temperature > 45:
-    print('Temperature is out of range!')
-    return False
-  elif soc < 20 or soc > 80:
-    print('State of Charge is out of range!')
-    return False
-  elif charge_rate > 0.8:
-    print('Charge rate is out of range!')
-    return False
-
-  return True
-
+import battery_test
+import Early_warning
 
 if __name__ == '__main__':
-  assert(battery_is_ok(25, 70, 0.7) is True)
-  assert(battery_is_ok(50, 85, 0) is False)
+    #assert(EV_test.battery_is_ok(25, 70, 0.7) is True)
+    #assert(EV_test.battery_is_ok(50, 85, 0) is False)
+    Early_warning.get_warning({'temperature' : 3,'soc' : 76,'charge_rate' : 0.7})
+    assert(battery_test.check_battery_is_ok({'temperature' : 25,'soc' : 70,'charge_rate' : 0.9}) is False) 
+    assert(battery_test.check_battery_is_ok({'temperature' : 25,'soc' : 70,'charge_rate' : 0.7}) is True)
+    assert(battery_test.check_battery_is_ok({'temperature' : 50,'soc' : 85,'charge_rate' : 0}) is False)
