@@ -27,4 +27,3 @@ class get_warning:
 			print('Warning: Approaching low_charge_rate')
 		elif (self.charge_rate >= 0.7 ) and (self.charge_rate <= 0.8 ):
 			print("Warning: Approaching peak_charge_rate")
-
