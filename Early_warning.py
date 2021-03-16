@@ -12,7 +12,7 @@ class get_warning:
 		self.check_charge_rate_warning_high()
 
 	def check_temperature_warning(self):
-		if self.temperature in range(BMS_allowed_range['temperature']['min'],int (BMS_allowed_range['temperature']['min'] + BMS_allowed_range['temperature']['max']*0.05+1):
+		if self.temperature in range(BMS_allowed_range['temperature']['min'],int(BMS_allowed_range['temperature']['min'] + BMS_allowed_range['temperature']['max']*0.05+1)):
 			print('Warning: Approaching low_teperature')
 		elif self.temperature in range(40,45):
 			print("Warning: Approaching peak_temperature")
