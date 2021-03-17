@@ -20,7 +20,7 @@ def check_tolerance_range(parameter,value,out_of_range_parameters,actions_on_par
             out_of_range_parameters[parameter] = " High Breach"
             actions_on_parameters[parameter]= 'value to be decreased'
      else :
-         Early_warnings.get_warning(parameter,value,out_of_range_parameters,actions_on_parameters)
+         Early_warnings.get_warnings(parameter,value,out_of_range_parameters,actions_on_parameters)
 
 
 
